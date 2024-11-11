@@ -7,6 +7,7 @@ import com.mlt.etsdriver.models.DriverLocationRequest;
 import com.mlt.etsdriver.models.DriverStatusRequest;
 import com.mlt.etsdriver.models.EarningsResponse;
 import com.mlt.etsdriver.models.RegistrationRequest;
+import com.mlt.etsdriver.models.RouteResponse;
 import com.mlt.etsdriver.models.User;
 
 import org.json.JSONObject;
@@ -25,7 +26,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.PUT;
-
+import retrofit2.http.Query;
 
 
 public interface ApiService {
@@ -106,7 +107,16 @@ public interface ApiService {
     @POST("/api/change-availability")
     Call<ResponseBody> updateStatus(@Field("user_id") int userId, @Field("status") int status);
 
+    // Update location to backend
+    @POST("updateLocation")
+    Call<Void> updateLocation(@Query("latitude") double latitude, @Query("longitude") double longitude);
 
-//    @POST("/api/change-availability")
-//    Call<ResponseBody> updateStatus(@Body RequestBody requestBody);
+    // Get route from source to destination using Google Directions API
+    @GET("directions/json")
+    Call<RouteResponse> getRoute(
+            @Query("origin") String origin,
+            @Query("destination") String destination,
+            @Query("key") String apiKey
+    );
+
 }

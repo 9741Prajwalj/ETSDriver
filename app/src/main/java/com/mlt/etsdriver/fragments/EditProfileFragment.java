@@ -25,6 +25,7 @@ import com.mlt.etsdriver.models.DriverLocationRequest;
 import com.mlt.etsdriver.models.DriverStatusRequest;
 import com.mlt.etsdriver.models.EarningsResponse;
 import com.mlt.etsdriver.models.RegistrationRequest;
+import com.mlt.etsdriver.models.RouteResponse;
 import com.mlt.etsdriver.models.TripDetails;
 import com.mlt.etsdriver.models.User;
 import com.mlt.etsdriver.network.ApiService;
@@ -129,6 +130,16 @@ public class EditProfileFragment extends Fragment {
 
             @Override
             public Call<ResponseBody> updateStatus(int userId, int status) {
+                return null;
+            }
+
+            @Override
+            public Call<Void> updateLocation(double latitude, double longitude) {
+                return null;
+            }
+
+            @Override
+            public Call<RouteResponse> getRoute(String origin, String destination, String apiKey) {
                 return null;
             }
 
