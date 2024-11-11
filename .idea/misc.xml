@@ -1,0 +1,43 @@
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/java/com/mlt/etsdriver/utills/MyEditText.java" value="0.13240740740740742" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/drawable-Idpi/round_corner_primary_color_shape.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/drawable-Idpi/white_roundshape_background.xml" value="0.264" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/drawable-v21/left_chat.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/drawable-v21/rightchat.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/drawable/black_login_back.xml" value="0.1325" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/drawable/edittext_boder.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/drawable/horizontal_dashed_line.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/drawable/primary_color_rect_shape.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/drawable/red_color_rect_shape.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/drawable/round_shape.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/drawable/roundshape.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/drawable/white_color_rect_shape.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/activity_favourite_place_search.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/activity_history_details.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/activity_login.xml" value="0.264" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/activity_profile.xml" value="0.18087035358114234" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/activity_show_profile.xml" value="0.15820489573889393" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/activity_sign_up.xml" value="0.1339712918660287" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/activity_signup.xml" value="0.21992401857323765" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/activity_sos_call.xml" value="0.2" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/activity_splash.xml" value="0.18087035358114234" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/activity_update_profile.xml" value="0.15820489573889393" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/cancel_dialog.xml" value="0.15820489573889393" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/fragment_earnings.xml" value="0.16" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/fragment_help.xml" value="0.18087035358114234" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/fragment_on_going_trips.xml" value="0.15820489573889393" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/fragment_soruce_and_destination.xml" value="0.2" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/nav_header_main.xml" value="0.2" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/layout/new_history_list_item.xml" value="0.1" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/menu/activity_main_drawer.xml" value="0.27447916666666666" />
+        <entry key="..\:/Users/PRAJWAL J/AndroidStudioProjects/ETSdriver2/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="jbr-21" project-jdk-type="JavaSDK" />
+</project>

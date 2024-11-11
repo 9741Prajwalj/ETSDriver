@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    <group android:checkableBehavior="single">-->
+<!--        <item-->
+<!--            android:id="@+id/nav_profile"-->
+<!--            android:icon="@drawable/ic_profile"-->
+<!--            android:title="@string/profile"-->
+<!--            android:visible="false" />-->
+<!--        <item-->
+<!--            android:id="@+id/txtHistory"-->
+<!--            android:icon="@drawable/ic_history"-->
+<!--            android:title="@string/history" />-->
+<!--        <item-->
+<!--            android:id="@+id/txtEarning"-->
+<!--            android:icon="@drawable/ic_earning"-->
+<!--            android:title="Earning" />-->
+<!--        <item-->
+<!--            android:id="@+id/txtSummary"-->
+<!--            android:icon="@drawable/ic_summary"-->
+<!--            android:title="@string/summary" />-->
+<!--        <item-->
+<!--            android:id="@+id/txtReview"-->
+<!--            android:icon="@drawable/ic_star"-->
+<!--            android:title="Review" />-->
+<!--        <item-->
+<!--            android:id="@+id/txtNotifi"-->
+<!--            android:icon="@drawable/ic_notification"-->
+<!--            android:title="Notifications" />-->
+<!--        <item-->
+<!--            android:id="@+id/txtHelp"-->
+<!--            android:icon="@drawable/ic_complaint"-->
+<!--            android:title="@string/help" />-->
+<!--        <item-->
+<!--            android:id="@+id/btnLogout"-->
+<!--            android:icon="@drawable/ic_logout"-->
+<!--            android:title="Logout" />-->
+<!--    </group>-->
+</menu>

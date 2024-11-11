@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_rounded_half_screen">
+
+    <ImageView
+        android:id="@+id/img_profile_header"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_dummy_user"
+        android:layout_gravity="center"
+        app:civ_border_color="@color/colorPrimary"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:id="@+id/txt_user_name_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="John Smith"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:paddingTop="8dp" />
+
+    <TextView
+        android:id="@+id/txt_edit_user_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_semibold"
+        android:text="Edit Profile"
+        android:textColor="@color/colorPrimary"
+        android:textSize="16sp"
+        android:paddingTop="4dp" />
+</LinearLayout>

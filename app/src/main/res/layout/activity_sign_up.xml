@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.RegisterActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="225.50dp"
+        android:layout_centerVertical="true"
+        android:background="@drawable/middle_boxmirror"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="299.00dp"
+            android:layout_height="225.00dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6.50dp"
+            android:gravity="center|start"
+            android:orientation="vertical">
+
+
+            <com.mlt.etsdriver.utills.MyEditText
+                android:id="@+id/etMNum"
+                android:layout_width="match_parent"
+                android:layout_height="54.60dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/transparent"
+                android:drawableStart="@drawable/ic_baseline_contact_phone_24"
+                android:drawablePadding="13.00dp"
+                android:hint="Mobile Number"
+                android:inputType="textEmailAddress"
+                android:paddingStart="6.50dp"
+                android:paddingEnd="6.50dp"
+                android:textColorHint="@color/black"
+                android:textSize="18.20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view_grey_bg_" />
+
+            <com.mlt.etsdriver.utills.MyEditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="54.60dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/transparent"
+                android:drawableStart="@drawable/ic_user_name"
+                android:drawablePadding="13.00dp"
+                android:hint="@string/name"
+                android:inputType="textEmailAddress"
+                android:paddingStart="6.50dp"
+                android:paddingEnd="6.50dp"
+                android:textColorHint="@color/black"
+                android:textSize="18.20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view_grey_bg_" />
+
+
+            <com.mlt.etsdriver.utills.MyEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="54.60dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/transparent"
+                android:drawableStart="@drawable/ic_password"
+                android:drawablePadding="13.00dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:paddingStart="6.50dp"
+                android:paddingEnd="6.50dp"
+                android:textColorHint="@color/black"
+                android:textSize="18.20dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/view_grey_bg_" />
+
+
+            <com.mlt.etsdriver.utills.MyEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="54.60dp"
+                android:background="@color/white"
+                android:backgroundTint="@color/transparent"
+                android:drawableStart="@drawable/ic_mail"
+                android:drawablePadding="13.00dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="6.50dp"
+                android:paddingEnd="6.50dp"
+                android:textColorHint="@color/black"
+                android:textSize="18.20dp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnSignUp"
+            android:layout_width="75.40dp"
+            android:layout_height="75.40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="13.00dp"
+            android:padding="26.00dp"
+            android:background="@drawable/round_shape"
+            android:src="@drawable/right_arrow_new"
+            android:rotation="@integer/angle_rtl_180"
+            android:textColor="@color/white" />
+
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="153dp"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10.40dp"
+        android:src="@drawable/ic_launcher_web" />
+
+    <com.mlt.etsdriver.utills.MyBoldTextView
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20.80dp"
+        android:gravity="center"
+        android:text="@string/registration"
+        android:textColor="@color/black"
+        android:textSize="23.40dp" />
+
+    <LinearLayout
+        android:layout_width="141.00dp"
+        android:layout_height="91.00dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="52.00dp"
+        android:background="@drawable/box_login"
+        android:gravity="end">
+
+        <TextView
+            android:id="@+id/txtSignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:padding="6.50dp"
+            android:text="Login"
+            android:textColor="@color/colorPrimary"
+            android:textSize="27.30dp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
