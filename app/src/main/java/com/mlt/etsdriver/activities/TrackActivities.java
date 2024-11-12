@@ -66,7 +66,7 @@ public class TrackActivities extends AppCompatActivity implements OnMapReadyCall
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment_map); // Make sure layout file is `activity_track.xml`
+        setContentView(R.layout.activity_track); // Make sure layout file is `activity_track.xml`
 
         // Initialize Firebase database reference
         firebaseDatabaseRef = FirebaseDatabase.getInstance().getReference("drivers");
@@ -78,7 +78,7 @@ public class TrackActivities extends AppCompatActivity implements OnMapReadyCall
         sharedPreferences = getSharedPreferences("AppPrefs", Context.MODE_PRIVATE);
 
         // Set up Google Map
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.provider_map);
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.webView);
         if (mapFragment != null) {
             mapFragment.getMapAsync(this);
         }

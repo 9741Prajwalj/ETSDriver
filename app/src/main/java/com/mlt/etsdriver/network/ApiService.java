@@ -104,6 +104,8 @@ public interface ApiService {
             @Body DriverLocationRequest locationRequest
     );
 
+    @GET("com/mlt/etsdriver/activities/LoginActivity.java") // Replace with your actual endpoint
+    Call<JSONObject> getUserInfo();
     @POST("/api/change-availability")
     Call<ResponseBody> updateStatus(@Field("user_id") int userId, @Field("status") int status);
 

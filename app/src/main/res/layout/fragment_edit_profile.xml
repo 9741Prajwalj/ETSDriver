@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center_vertical"
-            android:text="Edit Profile"
+            android:text="  Edit Profile"
             android:textColor="@android:color/white"
             android:textSize="18sp" />
     </LinearLayout>
@@ -55,7 +55,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profileImage"
                 android:layout_width="200dp"
-                android:layout_height="200dp"
+                android:layout_height="150dp"
                 android:src="@drawable/ic_dummy_user"
                 android:contentDescription="Profile Image"
                 android:scaleType="centerCrop"
@@ -66,6 +66,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Upload Photo"
+                android:background="@drawable/bg_rounded_button"
                 android:layout_marginTop="16dp"
                 android:textColor="@color/white" />
         </LinearLayout>
@@ -85,123 +86,130 @@
             android:orientation="vertical"
             android:padding="16dp">
 
+            <!-- Main Heading for Personal Information -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Personal Information"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:textColor="@color/black"
+                android:layout_marginBottom="12dp" />
+
             <!-- Username Row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="18dp"
                 android:gravity="center_vertical">
 
-                <EditText
+                <TextView
                     android:id="@+id/edtUsername"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:hint="Driver Name"
-                    android:textSize="16sp"
-                    android:textAppearance="?attr/textAppearanceSubtitle1"
-                    android:inputType="textPersonName" />
-
-                <ImageButton
-                    android:id="@+id/editUsername"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_edit_black_24dp"
-                    android:contentDescription="Edit Username" />
+                    android:text="Username"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <!-- Details for Username -->
+                <TextView
+                    android:id="@+id/txtUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:visibility="visible"
+                    android:text="username"
+                    android:textSize="18sp"
+                    android:paddingTop="4dp" />
+
+
             </LinearLayout>
 
             <!-- Email Row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="18dp"
                 android:gravity="center_vertical">
 
-                <EditText
+                <TextView
                     android:id="@+id/edtEmail"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:hint="Driver Email"
-                    android:textSize="16sp"
-                    android:textAppearance="?attr/textAppearanceSubtitle1"
-                    android:inputType="textEmailAddress" />
-
-                <ImageButton
-                    android:id="@+id/editEmail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_edit_black_24dp"
-                    android:contentDescription="Edit Email" />
+                    android:text="Email"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <!-- Details for Email -->
+                <TextView
+                    android:id="@+id/txtEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:visibility="visible"
+                    android:text="Email"
+                    android:textSize="18sp"
+                    android:paddingTop="4dp" />
             </LinearLayout>
 
             <!-- Phone Row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="8dp"
+                android:orientation="vertical"
+                android:layout_marginBottom="18dp"
                 android:gravity="center_vertical">
 
-                <EditText
+                <TextView
                     android:id="@+id/edtPhone"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:hint="Driver Phone Number"
-                    android:textSize="16sp"
-                    android:textAppearance="?attr/textAppearanceSubtitle1"
-                    android:inputType="phone" />
-
-                <ImageButton
-                    android:id="@+id/editPhone"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_edit_black_24dp"
-                    android:contentDescription="Edit Phone" />
+                    android:text="Phone"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <!-- Details for Phone -->
+                <TextView
+                    android:id="@+id/txtPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:visibility="visible"
+                    android:text="phone number"
+                    android:textSize="18sp"
+                    android:paddingTop="4dp" />
             </LinearLayout>
 
             <!-- Address Row -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="8dp"
-                android:gravity="center_vertical">
+                android:orientation="vertical"
+                android:layout_marginBottom="18dp">
 
-                <EditText
+                <TextView
                     android:id="@+id/edtAddress"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:hint="Driver Address"
-                    android:textSize="16sp"
-                    android:textAppearance="?attr/textAppearanceSubtitle1"
-                    android:maxLines="3"
-                    android:scrollHorizontally="false"
-                    android:inputType="textPostalAddress" />
-
-                <ImageButton
-                    android:id="@+id/editAddress"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_edit_black_24dp"
-                    android:contentDescription="Edit Address" />
+                    android:text="Address"
+                    android:textStyle="bold"
+                    android:textSize="16sp" />
+
+                <!-- Details for Address -->
+                <TextView
+                    android:id="@+id/txtAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:visibility="visible"
+                    android:text="Address"
+                    android:textSize="18sp"
+                    android:maxLines="4"
+                    android:paddingTop="4dp" />
             </LinearLayout>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-
-    <!-- Save Button -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnSave"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/bg_rounded_button_green"
-        android:text="Save"
-        android:layout_gravity="center"
-        android:onClick="saveData" />
 </LinearLayout>

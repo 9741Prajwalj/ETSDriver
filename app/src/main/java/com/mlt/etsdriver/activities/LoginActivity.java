@@ -38,6 +38,8 @@ public class LoginActivity extends AppCompatActivity {
     private int userId;
     private String username;
     private String apiToken;
+    
+    private    SharedPreferencesManager sharedPreferencesManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        SharedPreferencesManager sharedPreferencesManager = new SharedPreferencesManager(this);
+        sharedPreferencesManager = new SharedPreferencesManager(this);
 //        sharedPreferencesManager.saveLoginData(userId, username, apiToken, true);
         if (sharedPreferencesManager.isLoggedIn()) {
             onLoginSuccess();
@@ -120,14 +122,18 @@ public class LoginActivity extends AppCompatActivity {
                         if (success == 1) {
                             JSONObject dataObject = jsonResponse.getJSONObject("data").getJSONObject("userinfo");
                             int userId = dataObject.optInt("user_id", -1);
-                            String apiToken = dataObject.optString("api_token", "");
-                            String userName = dataObject.optString("user_name", "");
+                            String apiToken = dataObject.optString("api_token");
+                            String userName = dataObject.optString("user_name");
+                            String email = dataObject.optString("emailid");
+                            String phone = dataObject.optString("phone");
+                            String address = dataObject.optString("address", "Address not available");
+                            int status = dataObject.optInt("status", 0);
 
                             Log.d("LoginActivity", "Extracted user data - userId: " + userId + ", apiToken: " + apiToken + ", userName: " + userName);
-
                             if (userId != -1 && !userName.isEmpty() && !apiToken.isEmpty())  {
-                                SharedPreferencesManager sharedPreferencesManager = new SharedPreferencesManager(LoginActivity.this);
-                                sharedPreferencesManager.saveLoginData(userId ,userName, apiToken, true);
+                                Log.d("LoginActivity", " inside th if user data - userId: " + userId + ", apiToken: " + apiToken + ", userName: " + userName);
+
+                                sharedPreferencesManager.saveLoginData(userId ,userName, apiToken, email,phone,address, true,status);
                                 Log.d("LoginActivity", "User data saved in SharedPreferences");
 
                                 Toast.makeText(LoginActivity.this, "Login successful!", Toast.LENGTH_SHORT).show();

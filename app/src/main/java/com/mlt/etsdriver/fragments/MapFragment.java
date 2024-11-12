@@ -2,6 +2,8 @@ package com.mlt.etsdriver.fragments;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -57,6 +59,7 @@ import com.google.firebase.FirebaseApp;
 import com.mlt.etsdriver.R;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.mlt.etsdriver.activities.LoginActivity;
 import com.mlt.etsdriver.models.DriverLocationRequest;
 import com.mlt.etsdriver.models.DriverStatusRequest;
 import com.mlt.etsdriver.network.ApiService;
@@ -71,13 +74,6 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.PolylineOptions;
-import com.google.android.gms.maps.model.Polyline;
-import org.json.JSONArray;
-import org.json.JSONObject;
-//, RouteListener
 public class MapFragment extends Fragment implements OnMapReadyCallback{
 
     private GoogleMap googleMap;
@@ -94,8 +90,13 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
     private String userType;
     private String apiToken;
     private String username;
+    private String userName;
+    private String email;
+    private String address;
+    private String phone;
     private DatabaseReference mDatabase;
     private SharedPreferencesManager sharedPreferencesManager;
+    private static SharedPreferences sharedPreferences;
     private LocationCallback locationCallback;
     private Context context;
 
@@ -124,16 +125,30 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
 
         mDatabase = FirebaseDatabase.getInstance().getReference("locations");
 
-        // Initialize SharedsharedPreferencesManager
-        sharedPreferencesManager = new SharedPreferencesManager(requireContext());
+        // Initialize SharedPreferencesManager
+        sharedPreferencesManager = new SharedPreferencesManager(getContext());
+
         if (sharedPreferencesManager.isLoggedIn()) {
+            // Retrieve user data from SharedPreferences
             userId = sharedPreferencesManager.getUserId();
             username = sharedPreferencesManager.getUserName();
             apiToken = sharedPreferencesManager.getApiToken();
-            Log.d("MapFragment", "User details retrieved - userId: " + userId + ", username: " + username + ", api_toke: " + apiToken);
+            email = sharedPreferencesManager.getEmail();
+            phone = sharedPreferencesManager.getPhone();
+            address = sharedPreferencesManager.getAddress();
+
+            // Log retrieved details for debugging
+            Log.d("MapFragment", "User details retrieved - userId: " + userId + ", username: " + username + ", apiToken: " + apiToken);
+
         } else {
+            // Log the message and show a Toast if the user is not logged in
             Log.e("MapFragment", "User not logged in");
             Toast.makeText(getActivity(), "User not logged in", Toast.LENGTH_SHORT).show();
+
+            // Optionally, navigate to the LoginActivity
+            Intent intent = new Intent(getActivity(), LoginActivity.class);
+            startActivity(intent);
+            getActivity().finish();
         }
 
         // Initialize LocationRequest
@@ -408,7 +423,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
         SharedPreferencesManager sharedPreferencesManager = new SharedPreferencesManager(getContext());
         String apiToken = sharedPreferencesManager.getApiToken();
         int userId = sharedPreferencesManager.getUserId();
-        String username = sharedPreferencesManager.getUsername();
+        String username = sharedPreferencesManager.getUserName();
 
         // Check if the fragment is still attached to its activity
         if (!isAdded() || getContext() == null || sharedPreferencesManager == null) {
@@ -444,7 +459,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
         SharedPreferencesManager sharedPreferencesManager = new SharedPreferencesManager(requireContext());
         String apiToken = sharedPreferencesManager.getApiToken();
         int userId = sharedPreferencesManager.getUserId();
-        String username = sharedPreferencesManager.getUsername();
+        String username = sharedPreferencesManager.getUserName();
         if (getContext() == null || sharedPreferencesManager == null) {
             Log.e("MapFragment", "Context or SharedPreferencesManager is null");
             return;
@@ -520,7 +535,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback{
             }
         }
     }
-
 
     public static class LocationData {
         public String user_id;
