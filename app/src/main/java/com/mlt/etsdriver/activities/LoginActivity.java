@@ -1,7 +1,5 @@
 package com.mlt.etsdriver.activities;
 
-import static androidx.core.content.ContentProviderCompat.requireContext;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -23,9 +21,8 @@ import org.json.JSONObject;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
-import com.mlt.etsdriver.utills.SharedPreferencesManager;
+
+import com.mlt.etsdriver.helper.SharedPreferencesManager;
 
 
 public class LoginActivity extends AppCompatActivity {

@@ -50,7 +50,7 @@
                 android:padding="16dp">
 
                 <!-- User Image -->
-                <ImageView
+                <de.hdodenhof.circleimageview.CircleImageView
                     android:id="@+id/img_profile"
                     android:layout_width="80dp"
                     android:layout_height="80dp"
@@ -75,9 +75,9 @@
                     android:id="@+id/txtEdituser"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:drawableEnd="@drawable/ic_edit_black_24dp"
+                    android:drawableEnd="@drawable/ic_profile"
                     android:fontFamily="@font/montserrat_semibold"
-                    android:text="@string/edit"
+                    android:text="View"
                     android:textColor="@color/colorPrimary"
                     android:textSize="16sp"
                     android:gravity="center"

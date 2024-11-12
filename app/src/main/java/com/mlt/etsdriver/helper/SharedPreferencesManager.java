@@ -1,11 +1,10 @@
-package com.mlt.etsdriver.utills;
+package com.mlt.etsdriver.helper;
 
 import static com.mlt.etsdriver.manager.UserStatusManager.updateStatus;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.util.Log;
-import android.widget.TextView;
 
 public class SharedPreferencesManager {
 

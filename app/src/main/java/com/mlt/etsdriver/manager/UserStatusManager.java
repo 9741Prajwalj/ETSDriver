@@ -1,20 +1,14 @@
 package com.mlt.etsdriver.manager;
 
-import static com.mlt.etsdriver.utills.SharedPreferencesManager.KEY_USER_ID;
+import static com.mlt.etsdriver.helper.SharedPreferencesManager.KEY_USER_ID;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.mlt.etsdriver.activities.LoginActivity;
 import com.mlt.etsdriver.network.ApiService;
-import com.mlt.etsdriver.network.FirebaseHelper;
 import com.mlt.etsdriver.network.RetrofitClient;
-import com.mlt.etsdriver.utills.SharedPreferencesManager;
 
 import org.json.JSONObject;
 

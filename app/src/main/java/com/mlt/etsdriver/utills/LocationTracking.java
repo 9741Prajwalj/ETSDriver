@@ -17,7 +17,6 @@ import android.util.Log;
 //import com.google.android.gms.maps.model.LatLng;
 //import com.google.maps.android.SphericalUtil;
 
-
 public class LocationTracking extends Service {
     private static final String TAG = "Location_Tracking";
     private static final int LOCATION_INTERVAL = 1000;

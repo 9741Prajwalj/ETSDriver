@@ -1,8 +1,6 @@
 package com.mlt.etsdriver.activities;
 
 import static androidx.core.app.PendingIntentCompat.getActivity;
-import static com.mlt.etsdriver.manager.UserStatusManager.context;
-import static com.mlt.etsdriver.network.FirebaseHelper.updateStatusInFirebase;
 
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
@@ -35,13 +33,11 @@ import com.mlt.etsdriver.fragments.EditProfileFragment;
 import com.mlt.etsdriver.fragments.SummaryFragment;
 import com.mlt.etsdriver.fragments.MapFragment;
 import com.mlt.etsdriver.manager.UserStatusManager;
-import com.mlt.etsdriver.utills.SharedPreferencesManager;
-
+import com.mlt.etsdriver.helper.SharedPreferencesManager;
 
 public class MainActivity extends AppCompatActivity {
 
     private DrawerLayout drawerLayout;
-    private  String Tag =" MainActivity";
     private NavigationView navigationView;
     private TextView txtEarning, txtReview, txtHistory, txtSummary, txtHelp, txtNotifi, txtEdituser;
     private Button btnLogout;
